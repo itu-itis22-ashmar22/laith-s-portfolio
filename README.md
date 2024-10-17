@@ -1,4 +1,4 @@
-# :wave: The Basics of GitHub 
+# :wave: The Basics of GitHub  MODIFIED BY LAITH ASHMAR. 150220919 
 
 ## 🤓 Course overview and learning outcomes 
 
