@@ -1,0 +1,138 @@
+<!DOCTYPE html>
+<meta charset="UTF-8">
+<html>
+    <head>
+        <title> FORM </title>
+    </head>
+    <body>
+        <script>
+            function formSubmitted(event) {
+                event.preventDefault();
+
+                let studentIDControl = checkStudentID();
+                let studentNameControl = checkName();
+                let studentAgeControl = checkAge();
+
+
+                if(studentNameControl == 1){
+                    alert("Name must be filled!");
+                }
+
+                if(studentAgeControl == 1){
+                    alert("Age and bithdate do not match");
+                }
+
+                console.log("Student ID Check Result: " + studentIDControl);
+                
+                if(studentIDControl == 1){
+                    alert("Student ID must be 9 digits!");
+                }else if(studentIDControl == 2){
+                    alert("Student ID must be only numbers!");
+                }
+                
+                if(studentAgeControl == 0 & studentIDControl == 0 & studentNameControl == 0) {
+                    let today = new Date();
+                    alert("Form submitted successfully! Date: " + today.getDate() + " " + (today.getMonth()+1) + " " + today.getFullYear());
+                }
+
+            }
+
+            function checkAge(){
+                let today = new Date();
+                let studentAge = document.getElementById("ageCal").value;
+                let studentBirth = document.getElementById("birthid").value;
+                let studentbirth = new Date(studentBirth)
+                let expectedAge = today.getFullYear() - studentbirth.getFullYear();
+                if(studentAge != expectedAge){
+                    return 1;
+                } else return 0;
+            }
+
+            function checkName(){
+                let studentName = document.getElementById("nameid").value;
+                if(studentName == null || studentName == '' || studentName == undefined){
+                    return 1;
+                } else return 0;
+            }
+
+            function checkStudentID(){
+                console.log("Student ID is being checked");
+                let studentID = document.getElementById("id").value;
+                if(studentID.length != 9){
+                    return 1;
+                } else if (isNaN(studentID)){
+                    return 2;
+                } else return 0;
+            }
+
+            
+
+        </script>
+
+        <form id="formID" onsubmit="formSubmitted(event)">
+            <fieldset>
+                <legend> FORM </legend>
+                <div>
+                    <label for="name"> Name & Surname </label>
+                    <input placeholder="Username" id="nameid">
+                </div>
+
+                <div>
+                    <label for="id"> Student ID</label>
+                    <input placeholder="Student ID" id="id">
+                </div>
+
+                <div>
+                    <label for="ageCall"> Age </label>
+                    <input id="ageCal" type="number" name="age" value="0">
+                </div>
+
+                <div>
+                    <label for="email"> Email </label>
+                    <input type="email">
+                </div>
+
+                <div>
+                    <label for="birthdate"> Birthdate </label>
+                    <input type="date" id="birthid">
+                </div>
+
+                <div>
+                    <label for="password"> Password </label>
+                    <input type="password" placeholder="Password">
+                </div>
+
+                <div>
+                    <label for="wellcheck"> I read the assignment description well </label>
+                    <input type="checkbox">
+                </div>
+
+                <div>
+                    <label for="askcheck"> I asked my friends to what to do </label>
+                    <input type="checkbox">
+                </div>
+
+
+                <div>
+                    <label for="wellradio"> I read my friends to what to do </label>
+                    <input type="radio" namer="read">
+                </div>
+
+                <div>
+                    <label for="askradio"> I asked my friends to what to do  </label>
+                    <input type="radio" namer="read">
+                </div>
+
+                <div>
+                    <label for="textarea"> Others </label>
+                    <textarea></textarea>
+                </div>
+
+                <button type="reset"> Reset </button>
+                <button type="submit"> Submit </button>
+            </fieldset>
+
+        </form>
+        
+    </body>
+</html>
