@@ -1,128 +1,41 @@
 <!DOCTYPE html>
-<meta charset="UTF-8">
+<script src="script.js"></script>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Laith's personal profile</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <header>
+    <div id="bubble-container"></div>
+    <h1>Welcome to Laith's profile</h1>
+  </header>
+  <main>
+    <section class="about-me">
+      <img src="laith photo.jpg" alt="A photo of Laith" class="profile-photo">
+      <h2>About Me</h2>
+      <p>Hi! I'm Laith Ashmar, a student at Istanbul Teknik University in Istanbul, Turkey. I am passionate about computer programming languages and everything related to programming, including software development, algorithms, and system design.</p>
+    </section>
 
-<html>
-   <head>
-         <title>My Web page</title>
-<link rel = "stylesheet" type = "text/css" href = "14_11_2024.css" />
+    <section class="academic-interests">
+      <h3>My Academic Interests</h3>
+      <p>I focus on areas such as autonomous robotics, optical systems, and digital design. My projects include developing assistive robots and exploring advanced control systems.</p>
+    </section>
 
-          
-   </head>
-
-   <body onload = "document.body.style.backgroundColor = 'pink'; welcomeFunction()"
-  	  onresize="document.body.style.backgroundColor='lightblue'"
-
-	onkeydown="document.body.style.backgroundColor='white'"
-	onkeyup="document.body.style.backgroundColor='lightyellow'">
-
-   <script>
-    function welcomeFunction(){
-    alert("Welcome");
-    
-    }
-    function keydownFunction() {
-        document.getElementById("name").style.backgroundColor = 'lightblue';
-    }
-    
-    </script>
-              
-              Enter your name: <input type="text" id="name" onkeydown="keydownFunction()">
-              
-          <p class = "centered">
-            <em> laith ashmar
-            <br>
-            150220919
-            </em>
-            </p>
-            <div class="center-icon">
-          <p class="centered"> <a href="https://github.com/itu-itis/introduction-to-information-systems-2024-itu-itis22-ashmar22">
-            <img src="github_icon.png" alt="GitHub Icon">
-         </a></p>  
-        </div>         
-          <h4><strong>Courses that I am taking</strong></h4>
-         
-           <ol>
-              <li> <strong>BBF 101E-Introduction to Information Systems</strong></li>
-              <li>FIZ 101E-pyhiscs 1</li>
-              <li>MAT 281E-Linear Algebra and Applications</li>
-              <li>BLG 113E-Introduction to Computer Engineering and Ethics</li>
-              <li>MAT 103E-Mathematics 1</li>
-           </ol>
-
-
-
-          
-
-          <h1 onmouseover="style.color='orange'; style.backgroundColor='lightgreen'"
-	onmouseout="style.color='red'; style.backgroundColor=''"> <strong>Bees</strong></h1>
-
-
-          <p>The universe of Bees</p> 
-           
-    <ul> 
-           <li>Apis Mellifera</li>
-           <li>Agapostemon</li>
-           <li>Halictus</li>
-           <li>Colletes</li>
-           <li>Apidae</li>
-            <ul>
-                <li>Bombus</li>
-            </ul>
-    </ul>
-                  
-         
-          <p> <img src="bees.jpg">  </p>
-            <p> <a href="https://en.wikipedia.org/wiki/Bee">Click here for more informations</a> </p>     
-       
-
-<table> 
-    <tr>
-            
-        <th>Family</th>
-        <th>Genus</th>  
-
-    </tr>
-    <tr>
-            
-        <td>Apidae</td>
-        <td>Apis</td>  
-
-    </tr>
-    <tr>
-            
-        <td>Halictidae</td>
-        <td>Agapostemon</td>  
-
-    </tr>
-    <tr>
-            
-        <td>Halictidae</td>
-        <td>Halictus</td>  
-
-    </tr>
-    <tr>
-            
-        <td>collectidae</td>
-        <td>colletes</td>  
-
-    </tr>
-    <tr>
-            
-        <td>Apidae</td>
-        <td>bombus</td>  
-
-    </tr>
-
-</table>
-
-<table>
-   
-
-</table>
-            <pre>
-                  are you a beekeeper?
- 
-            this web page is right for you! I hope  you enjoy it.
-            </pre>
-   </body>
+    <div class="navigation">
+      <button id="navigate-game-btn">Play Word Prediction Game</button>
+    </div>
+    <script>
+      // Attach event listener to the button
+      document.getElementById("navigate-game-btn").addEventListener("click", function () {
+        window.location.href = "Word%20Prediction/game.html"; // Navigate to game.html inside the Word Prediction folder
+      });
+    </script> 
+  </main>
+  <footer>
+    <p>© 2025 Laith Ashmar - All Rights Reserved</p>
+  </footer>
+</body>
 </html>
